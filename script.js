@@ -8,7 +8,7 @@ app.use(express.json());
 
 app.use(cors({
     origin:"*"
-}))
+}));
 
 //todo: connect mongoDB here ...
 mongoose.connect("mongodb+srv://Trisha:DapBhWPyZwI471R1@cluster0.oaywa5b.mongodb.net/")
