@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-    origin:"https://employee-dashboard-murex.vercel.app/"
+    origin:"*"
 }));
 // mongodb://127.0.0.1:27017/addEmployee
 // 
@@ -23,3 +23,7 @@ app.use('/dashboard/employee', employeeRoute);
 app.listen(10000, () => {
     console.log('server is up and running at port 10000')
 })
+
+
+
+// "AxiosError: Network Error\n    at XMLHttpRequest.handleError (http://localhost:3000/static/js/bundle.js:64786:14)\n    at Axios.request (http://localhost:3000/static/js/bundle.js:65238:41)\n    at async getEmployee (http://localhost:3000/static/js/bundle.js:547:17)"
