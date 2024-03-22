@@ -56,7 +56,8 @@ const editEmployee = async (req, res) => {
 
 const deleteEmployee = async (req, res) => {
   try {
-    await employeeModel.deleteOne({ _id: req.body._id });
+    console.log('first', req.params.id) 
+    await employeeModel.deleteOne({ _id: req.params.id });
     res.json({
       success: true,
       message: "Successfully deleted the employee",

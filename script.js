@@ -7,9 +7,10 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-    origin:"*"
+    origin:"https://employee-dashboard-murex.vercel.app/"
 }));
-
+// mongodb://127.0.0.1:27017/addEmployee
+// 
 //todo: connect mongoDB here ...
 mongoose.connect("mongodb+srv://Trisha:DapBhWPyZwI471R1@cluster0.oaywa5b.mongodb.net/")
 .then(()=>console.log('Connected to Mongo DB'))
